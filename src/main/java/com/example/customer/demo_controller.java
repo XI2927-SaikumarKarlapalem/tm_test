@@ -2,6 +2,7 @@ package com.example.customer;
 
 import java.util.Map;
 import java.util.UUID;
+import java.util.List;
 
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -86,23 +87,22 @@ public class demo_controller {
 		        }
 		        }
 		}
-		
 		@GetMapping("/clients_list")
-		public customer clients_list(customer s)
+		public List<customer> clients_list(customer s)
 		{
-			return s;
+			return a.findAll();
 			
 		}
 		@GetMapping("/accounts_list")
-		public account_created accounts_list(account_created s)
+		public List<account_created> accounts_list(account_created s)
 		{
-			return s;
+			return b.findAll();
 			
 		}
 		@GetMapping("/balance_event")
-		public balance client_list(balance s)
+		public List<balance> client_list(balance s)
 		{
-			return s;
+			return c.findAll();
 			
 		}
 	}

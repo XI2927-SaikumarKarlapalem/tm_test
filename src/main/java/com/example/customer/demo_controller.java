@@ -37,7 +37,7 @@ public class demo_controller {
 	balances_cre c;
 	
 	
-//UUID uuid=UUID.randomUUID();
+
 	@PostMapping("/")
 	public void display(@RequestBody customer input)
 	{
